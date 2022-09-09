@@ -1,0 +1,287 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    
+}
+
+section{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    padding: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color:#99A3A4;
+    transition: 0.5s;
+}
+
+
+header{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 20px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #303030;
+}
+
+header .logo{
+    position: relative;
+    max-width: 50px;
+}
+
+header ul{
+    position:relative;
+    display: flex;
+}
+
+header ul li{
+    list-style: none;
+}
+
+header ul li a{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    display: inline-block;
+    color: rgb(255, 255, 255);
+    font-weight: 700;
+    margin-left: 50px;
+    text-decoration: none;
+    padding: 20px;    
+}
+header ul li a:hover{
+    color:rgb(247, 149, 57);
+    background-color: #111;
+    border-radius: 40px;
+    transition: .7s;
+  
+}
+.active{
+    color: rgb(247, 149, 57);
+    border-radius: 40px;
+    background-color: #111;
+
+}
+
+.content{
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.content .textBox{
+    position: relative;
+    max-width: 700px;
+}
+
+.content .textBox h2{
+    color: rgb(255, 255, 255);
+    font-size: 4em;
+    line-height: 1.5em;
+    font-weight: 900;
+    text-transform: uppercase;
+    margin-bottom: 40px;
+}
+
+.content .textBox h2 span{
+    font-size: 2em;
+}
+
+.content .textBox p{
+    font-family: 'Crimson Text', serif;
+    font-weight: 600;
+    font-size: 25px;
+    margin-bottom:20px;
+    color: #303030;
+}
+
+
+.content .textBox a{
+    display: inline-block;
+    text-decoration: none;
+    margin-top: 20px;
+    padding: 8px 20px;
+    background-color: #fff;
+    box-shadow: 0 0 20px #303030;
+    color: #111;
+    border-radius: 40px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.content .textBox a:hover{
+    box-shadow: 0 0 20px #fff;
+}
+.content .imgBox{
+    width: 600px;
+    display: flex;
+    padding-right: 50px;
+    margin-top: 50px;
+    justify-content: flex-end;
+}
+
+
+.content .imgBox img{
+    max-width: 600px;
+}
+
+.thumb{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    display: flex;
+}
+.thumb li{
+    list-style: none;
+    display: inline-block;
+    margin: 0 20px;
+    cursor: pointer;
+    transition: 0.5s;
+    padding: 5px;
+}
+.thumb li:hover{
+    transform: translateY(-15px);
+}
+
+
+
+.thumb li img{
+    max-width: 70px;
+}
+
+.sci{
+position: absolute;
+top: 50%;
+right: 30px;
+transform: translateY(-50%);
+display: flex;
+justify-content: center;
+align-items: center;
+flex-direction: column;
+}
+.sci img{
+    width: 50px;
+}
+
+.sci li{
+    list-style: none;
+
+}
+.sci li a{
+    display: inline-block;
+    margin: 5px 0;
+    transform: scale(.6);
+}
+
+@media(max-width: 991px){
+    section{
+        padding: 40px;
+        padding-bottom: 140px;
+    }
+    header{
+        padding: 20px 40px;
+    }
+    header .logo{
+        position: relative;
+        max-width: 60px;
+    }
+    header ul{
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: .2s;
+        visibility: hidden;
+        opacity: 0;
+    }
+    header ul li a{
+        display: inline-block;
+        color: #fff;
+        font-weight: 400;
+        margin-left: 0;
+        text-decoration: none;
+        font-size: 2em;
+        margin: 10px 0;
+    }
+    header ul li a:hover{
+        color: rgb(247, 149, 57);
+    }
+    .toggleMenu{
+        position: relative;
+        width: 40px;
+        height: 40px;
+        background: url(menu.png);
+        background-position: center;
+        background-size: 30px;
+        background-repeat: no-repeat;
+        z-index: 2;
+        cursor: pointer;
+    }
+   
+    .toggleMenu.active{
+        background: url(close.png);
+        background-position: center;
+        background-size: 25px;
+        background-repeat: no-repeat;
+    
+    }
+    header ul.active{
+        visibility: visible;
+        opacity: 1;
+    }
+    .content{
+        flex-direction: column;
+        margin-top:80px;
+    }
+    .content .textBox{
+        position: relative;
+        max-width: 100%;
+        padding-right: 20px;
+    }
+    .content .textBox h2{
+        font-size: 3em;
+    }
+    .content .textBox a{
+        font-size: 14px;
+        padding: 8px 15px;
+    }
+    .content .imgBox{
+        width: 100%;
+        display: flex;
+        padding-right: 0;
+        margin-top:50px;
+        justify-content: center;
+    }
+    .content .imgBox img{
+        max-width: 400px;
+    }
+    .thumb li img{
+        max-width: 60px;
+    }
+    .sci{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    width: 50px;
+    background-color: rgba(0, 0, 0, .2);
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    }
+}

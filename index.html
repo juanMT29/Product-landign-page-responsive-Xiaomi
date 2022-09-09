@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section class="sec">
+        <header>
+            <a href="#"> <img src="https://gsmneo.com/wp-content/uploads/2021/03/mi-1693561-1442602.png" class="logo"></a>
+            <div class="toggleMenu" onclick="menuToggle()"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">HNewsletter</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+                <h2>That's Whats <br><span>I like </span></h2>
+                <p>Buy your Xiaomi product in Argentina with an official guarantee in our Xiaomi Store Online. Xiaomi Store, Xiaomi's first official online store in Argentina, warranty and support.</p>
+
+                
+                <a href="#">View All Products</a>
+            </div>
+            <div class="imgBox">
+                <img src="Xiaomi001.png" class="Xiaomi">
+            </div>
+        </div>
+    <ul class="thumb">
+        <li><img src="Xiaomi001.png" onclick="imgSlider('Xiaomi001.png');cambioColor('#99A3A4')"></li>
+        <li><img src="Xiaomi002.jpg" onclick="imgSlider('Xiaomi002.jpg');cambioColor('#515A5A')"></li>
+        <li><img src="Xiaomi003.png" onclick="imgSlider('Xiaomi003.png');cambioColor('#E5E7E9')"></li>
+        </ul>
+    <ul class="sci">
+        <li><a href="#"><img src="https://cdn-icons-png.flaticon.com/128/87/87390.png" > </a></li>
+        <li><a href="#"><img src="https://logoeps.com/wp-content/uploads/2014/02/44589-facebook-logo-icon-vector-icon-vector-eps.png" alt=""> </a></li>
+        <li><a href="#"><img src="https://icon-library.com/images/linkedin-icon-png/linkedin-icon-png-17.jpg" alt=""></a></li>
+    </ul>
+    </section>
+<script type="text/javascript">
+    
+    function imgSlider(anything){
+    document.querySelector('.Xiaomi').src = anything;
+}
+
+function cambioColor(color){
+    const sec = document.querySelector('.sec');
+    sec.style.background = color;
+}
+
+function menuToggle(){
+    const toggleMenu = document.querySelector('.toggleMenu');
+    const navigation = document.querySelector('.navigation');
+    toggleMenu.classList.toggle('active');
+    navigation.classList.toggle('active')
+}
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+</body>
+</html>
